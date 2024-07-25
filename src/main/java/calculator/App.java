@@ -9,6 +9,12 @@ public class App {
 
         Scanner sc = new Scanner(System.in);
 
+        // 연산결과값을 저장 할 수있도록 int배열을 통해 10개까지 저장할 수있도록 선언 및
+        // 생성을 하였음
+        int[] results = new int[10];
+        int count = 0;
+
+        //반복을 위해 while () {} 사용 if문에 break를 넣어 exit 할때 반복중지
         while (true) {
             System.out.print("첫 번째 숫자를 입력하세요: ");
             int num1 = sc.nextInt();
@@ -16,18 +22,7 @@ public class App {
             int num2 = sc.nextInt();
             System.out.print("사칙연산 기호를 입력하세요: "); //+,-,*,/
             char operator1 = sc.next().charAt(0);
-
             // sc.next 변수뒤 charAt 메서드를 적용하여 인덱스 번호에 있는 문자를  char 로 변환
-
-
-
-            // exit 의 문자열을 작성하기 위해 String을 사용
-            System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-            String operator = sc.next();
-            if (operator.equals("exit")) {
-                System.out.println("프로그램을 종료합니다.");
-                break;
-            }
 
             int result = 0;
 
@@ -48,16 +43,29 @@ public class App {
             } else {
                 System.out.println("사칙연산 기호를 올바르게 입력해주세요 (+,-,*,/) ");
             }
+
             System.out.println("결과: " + result);
 
-            // /* exit 을 입력 받으면 반복 종료 */
+
+            // exit 의 문자열을 작성하기 위해 String을 사용
+            System.out.println("더 계산하시겠습니까? (exit 입력 시 종료) 다시 시작하시려면 타이핑 해주세요");
+            String operator = sc.next();
+            if (operator.equals("exit")) {
+                System.out.println("프로그램을 종료합니다.");
+                break;
+            }
+
+            // 배열에 저장된 결과값이 나올때마다 하나씩 늘어날 수 있도록 지정 하였고
+            // for문을 통해 정해진 배열 10까지 계속 반복 할 수 있도록 설정
+            results[count] = result;
+            count++;
+            System.out.println("저장결과:");
+            for (int i = 0; i < count; i++) {
+                System.out.println(results[i]);
+            }
 
         }
     }
 }
 
 
-// while (true) {  //  /* 반복문 사용 해서 연산을 반복 */
-//if (operator == 'E') {
-//                System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-//            }
