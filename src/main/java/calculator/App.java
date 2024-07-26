@@ -1,6 +1,7 @@
 package calculator;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -9,10 +10,9 @@ public class App {
 
         Scanner sc = new Scanner(System.in);
 
-        // 연산결과값을 저장 할 수있도록 int배열을 통해 10개까지 저장할 수있도록 선언 및
-        // 생성을 하였음
-        int[] results = new int[3];
-        int count = 0;
+
+        // 값을 무한히 저장하기 위해 동적 배열인 ArrayList 사용
+        ArrayList<Integer> results = new ArrayList<>();
 
 
 
@@ -55,34 +55,26 @@ public class App {
                 System.out.println("프로그램을 종료합니다.");
                 break; }
 
-            // 배열에 저장된 결과값이 나올때마다 하나씩 늘어날 수 있도록 지정 하였고
-            // for문을 통해 정해진 배열 10까지 계속 반복 할 수 있도록 설정
 
-
-            if (count == results.length) {
-                // 저장된 결과가 results 배열의 크기랑 같다면
-                // 저장된 결과값을 한 칸씩 앞으로 이동  for 문을 통해 반복
-                for (int i = 1; i < results.length; i++) {
-                    results[i - 1] = results[i];
-                }
-                // 배열의 마지막에 새 결과를 추가
-                results[results.length - 1] = result;
-            } else {
-                // else 를 통해 결과값이 가득차지 않았을 때 결과 추가 하고
-                // ++를 통해 결과값에 계속 새로운 count 증가
-                results[count] = result;
-                count++;
-            }
+            results.add(result); // results 에 연산결과 값을 추가
 
             System.out.println("저장결과:");
-            for (int i = 0; i < count; i++) {
-                System.out.println(results[i]); // results의 i번째 저장된 값을 참조
+            for (int rst : results) {
+                System.out.println(rst);       // for 문을 통해 연산결과를 rst 변수명으로 지정후 프린트
+            }
+
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+            String removeChat = sc.next();      // String에
+            if (removeChat.equals("remove") && !results.isEmpty()) {
+                results.remove(0);    // remove를 타이핑하고 결과값이 비어있지 않은경우 첫번째 요소를 삭제
             }
 
 
+
+            }
         }
         }
-    }
+
 
 
 
