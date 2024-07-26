@@ -11,8 +11,10 @@ public class App {
 
         // 연산결과값을 저장 할 수있도록 int배열을 통해 10개까지 저장할 수있도록 선언 및
         // 생성을 하였음
-        int[] results = new int[10];
+        int[] results = new int[3];
         int count = 0;
+
+
 
         //반복을 위해 while () {} 사용 if문에 break를 넣어 exit 할때 반복중지
         while (true) {
@@ -36,36 +38,54 @@ public class App {
                 result = num1 * num2;
             } else if (operator1 == '/') {
                 if (num2 != 0) {
-                    result = num1 / num2;}
-                else{
+                    result = num1 / num2;
+                } else {
                     System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
-                    }
+                }
             } else {
                 System.out.println("사칙연산 기호를 올바르게 입력해주세요 (+,-,*,/) ");
             }
 
             System.out.println("결과: " + result);
 
-
             // exit 의 문자열을 작성하기 위해 String을 사용
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료) 다시 시작하시려면 타이핑 해주세요");
             String operator = sc.next();
             if (operator.equals("exit")) {
                 System.out.println("프로그램을 종료합니다.");
-                break;
-            }
+                break; }
 
             // 배열에 저장된 결과값이 나올때마다 하나씩 늘어날 수 있도록 지정 하였고
             // for문을 통해 정해진 배열 10까지 계속 반복 할 수 있도록 설정
-            results[count] = result;
-            count++;
-            System.out.println("저장결과:");
-            for (int i = 0; i < count; i++) {
-                System.out.println(results[i]);
+
+
+            if (count == results.length) {
+                // 저장된 결과가 results 배열의 크기랑 같다면
+                // 저장된 결과값을 한 칸씩 앞으로 이동  for 문을 통해 반복
+                for (int i = 1; i < results.length; i++) {
+                    results[i - 1] = results[i];
+                }
+                // 배열의 마지막에 새 결과를 추가
+                results[results.length - 1] = result;
+            } else {
+                // else 를 통해 결과값이 가득차지 않았을 때 결과 추가 하고
+                // ++를 통해 결과값에 계속 새로운 count 증가
+                results[count] = result;
+                count++;
             }
 
+            System.out.println("저장결과:");
+            for (int i = 0; i < count; i++) {
+                System.out.println(results[i]); // results의 i번째 저장된 값을 참조
+            }
+
+
+        }
         }
     }
-}
+
+
+
+
 
 
