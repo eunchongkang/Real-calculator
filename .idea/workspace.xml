@@ -219,7 +219,7 @@
       <workItem from="1722212524723" duration="11000" />
       <workItem from="1722212641728" duration="26000" />
       <workItem from="1722213215524" duration="286000" />
-      <workItem from="1722246888050" duration="2783000" />
+      <workItem from="1722246888050" duration="3121000" />
     </task>
     <servers />
   </component>
@@ -247,5 +247,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="8번째 요구사항 충족" />
+    <option name="LAST_COMMIT_MESSAGE" value="8번째 요구사항 충족" />
   </component>
 </project>
