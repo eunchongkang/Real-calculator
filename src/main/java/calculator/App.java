@@ -75,7 +75,7 @@ public class App {
             String removeChat = sc.next();
             if (removeChat.equals("remove") && !calculator.getResults().isEmpty()) { //calculator 클래스의 결과값을 가져옴
                 calculator.removeResult(0);
-            } // remove를 타이핑하고 결과값이 비어있지 않은경우 첫번째 요소를 삭제
+            } // remove를 타이핑하고 결과값이 비어있지 않은경우 0번째 요소를 삭제
 
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             String inquiry = sc.next();

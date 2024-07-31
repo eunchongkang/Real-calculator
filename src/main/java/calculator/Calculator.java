@@ -38,7 +38,7 @@ public class Calculator {
     }
 
     public ArrayList<Integer> getResults() {
-        return results;
+        return results;  //간접 접근을 할 수 있도록 getter 메서드 구현
     }
 
     public void setResults(ArrayList<Integer> results) {
