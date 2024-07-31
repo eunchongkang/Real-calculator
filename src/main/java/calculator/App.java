@@ -26,7 +26,7 @@ public class App {
             int num2 = sc.nextInt();
             System.out.print("사칙연산 기호를 입력하세요: "); //+,-,*,/
             String operator = sc.next();
-            // sc.next 변수뒤 charAt 메서드를 적용하여 인덱스 번호에 있는 문자를  char 로 변환
+
 
 
 // if 조건문을 사용하여 사칙연산 기호에 따라 연산을 하였고
@@ -59,10 +59,16 @@ public class App {
 //                System.out.println(rst);   // for 문을 통해 연산결과를 rst 변수명으로 지정후 프린트
 //            }
 
-           int result = calculator.calculate(operator, num1, num2);
+            int result=0;
+            try {
+                result = calculator.calculate(operator, num1, num2);
+            } catch (Exception m){
+                System.out.println(m.getMessage()); // 예외 후 처리
+            }
             System.out.println("결과: " + result);
             //calculator 클래스의 calculate 매서드 호출, 연산실행
 
+            calculator.getResults().add(result);
 
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
