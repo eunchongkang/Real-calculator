@@ -75,14 +75,13 @@ public class App {
             String removeChat = sc.next();
             if (removeChat.equals("remove") && !calculator.getResults().isEmpty()) { //calculator 클래스의 결과값을 가져옴
                 calculator.removeResult(0);
-            } // remove를 타이핑하고 결과값이 비어있지 않은경우 첫번째 요소를 삭제
+            } // remove를 타이핑하고 결과값이 비어있지 않은경우 0번째 요소를 삭제
 
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             String inquiry = sc.next();
             if (inquiry.equals("inquiry")) {
-
-                for (int rst : calculator.getResults()) { // Calculator 클래스의 결과값을 rst 변수에 저장
-                    // 향상된 for문을 사용하여 저장결과값 rst를 반복하여 조회 할 수 있도록 함
+                results = calculator.getResults(); // Calculator 클래스의 결과값을 resluts 변수에 저장
+                for (int rst : results) {   //향상된 for문을 사용하여 저장결과값 rst를 반복하여 조회 할 수 있도록 함
                     System.out.println(rst);
                 }
             }
