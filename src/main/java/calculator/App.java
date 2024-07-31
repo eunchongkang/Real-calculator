@@ -80,10 +80,11 @@ public class App {
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             String inquiry = sc.next();
             if (inquiry.equals("inquiry")) {
-                results = calculator.getResults(); // Calculator 클래스의 결과값을 resluts 변수에 저장
-                for (int rst : results) {   //향상된 for문을 사용하여 저장결과값 rst를 반복하여 조회 할 수 있도록 함
-                    System.out.println(rst);
-                }
+                calculator.inquiryResults();
+//                results = calculator.getResults(); // Calculator 클래스의 결과값을 resluts 변수에 저장
+//                for (int rst : calculator.getResults()) {   //향상된 for문을 사용하여 저장결과값 rst를 반복하여 조회 할 수 있도록 함
+//                    System.out.println(rst);
+//                }
             }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료) 다시 시작하시려면 타이핑 해주세요");

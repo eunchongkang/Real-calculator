@@ -48,7 +48,12 @@ public class Calculator {
 
     public void removeResult(int result) {
         this.results.remove(result);
+    }
 
+    public void inquiryResults() {
+        for (int rst : results) {
+            System.out.println("연산 결과: " +rst);
+        }
     }
 }
 
