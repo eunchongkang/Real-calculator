@@ -52,7 +52,7 @@ public class Calculator {
 
     public void inquiryResults() {
         for (int rst : results) {
-            System.out.println("연산 결과: " +rst);
+            System.out.println("연산 결과: ");
         }
     }
 }
