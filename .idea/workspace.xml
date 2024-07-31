@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ef6da38-fcfb-4f3c-8f04-73af6e2682bf" name="변경" comment="">
+    <list default="true" id="0ef6da38-fcfb-4f3c-8f04-73af6e2682bf" name="변경" comment="2-1 요구사항 Exception 완료">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,11 +15,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/calculator/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/calculator/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/calculator/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/calculator/Calculator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/App.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/App.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Calculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +71,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -99,6 +108,7 @@
     &quot;Gradle.nbcamp-java-personal-task [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.nbcamp-java-personal-task [clean].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -111,6 +121,11 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;C:\\Users\\kang\\.gradle&quot;
+    ]
   }
 }</component>
   <component name="RunManager" selected="애플리케이션.App (1)">
@@ -219,8 +234,46 @@
       <workItem from="1722212524723" duration="11000" />
       <workItem from="1722212641728" duration="26000" />
       <workItem from="1722213215524" duration="286000" />
-      <workItem from="1722246888050" duration="3121000" />
+      <workItem from="1722246888050" duration="7366000" />
+      <workItem from="1722298330894" duration="13387000" />
+      <workItem from="1722322995111" duration="8725000" />
+      <workItem from="1722337955644" duration="6462000" />
+      <workItem from="1722384038435" duration="5707000" />
+      <workItem from="1722402050194" duration="8406000" />
     </task>
+    <task id="LOCAL-00001" summary="2-1 요구사항 Exception 제외">
+      <option name="closed" value="true" />
+      <created>1722315230538</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722315230538</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2-2 요구사항 Exception 제외">
+      <option name="closed" value="true" />
+      <created>1722327896758</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722327896758</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2-3 요구사항 Exception 제외">
+      <option name="closed" value="true" />
+      <created>1722388943146</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722388943146</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2-1 요구사항 Exception 완료">
+      <option name="closed" value="true" />
+      <created>1722409318789</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722409318789</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +295,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -250,6 +315,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="8번째 요구사항 충족" />
-    <option name="LAST_COMMIT_MESSAGE" value="8번째 요구사항 충족" />
+    <MESSAGE value="2-2 요구사항 Calculator클래스 활용" />
+    <MESSAGE value="2-2 요구사항 Calculator 클래스가 활용" />
+    <MESSAGE value="2-2 요구사항 Exception 제외" />
+    <MESSAGE value="2-3 요구사항 Exception 제외" />
+    <MESSAGE value="2-1 요구사항 Exception 제외" />
+    <MESSAGE value="2-1 요구사항 Exception 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="2-1 요구사항 Exception 완료" />
   </component>
 </project>

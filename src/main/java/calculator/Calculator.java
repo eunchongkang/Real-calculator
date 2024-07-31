@@ -42,10 +42,12 @@ public class Calculator {
     }
 
     public void setResults(ArrayList<Integer> results) {
-        this.results.clear();       // 결과를 모두 삭제
-        this.results.addAll(results); // 새로운 결과 추가
+        this.results = results;
     }
 
+    public void removeResult(int result) {
+        this.results.remove(result);
+    }
     }
 
 
