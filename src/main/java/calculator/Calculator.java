@@ -5,8 +5,12 @@ import java.util.ArrayList;
 
 public class Calculator {
     /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
-    private ArrayList<Integer> results = new ArrayList<>();
+    private final ArrayList<Integer> results;
     //private 를 통해 같은 클래스 내에서만 접근이 가능 하도록 캡슐화
+
+    public Calculator(ArrayList<Integer> results) {
+        this.results = results;
+    }
 
     public int calculate(String operator, int num1, int num2) {
         int result = 0;   //계산결과 변수값 초기화

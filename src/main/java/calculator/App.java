@@ -8,13 +8,13 @@ public class App {
 
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator(); //Calculator 객체 생성
+        Calculator calculator = new Calculator(new ArrayList<>()); //Calculator 객체 생성
 
         Scanner sc = new Scanner(System.in);
 
 
         // 값을 무한히 저장하기 위해 동적 배열인 ArrayList 사용을 위해 선언 및 생성 하였음
-        ArrayList<Integer> results = new ArrayList<>();
+        List<Integer> results = new ArrayList<>();
 
 
         //반복을 위해 while () {} 사용 if문에 break를 넣어 exit 할때 반복중지
