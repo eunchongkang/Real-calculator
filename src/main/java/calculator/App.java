@@ -8,25 +8,31 @@ public class App {
 
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator(new ArrayList<>()); //Calculator 객체 생성
+        Calculator calculator = new Calculator(new ArrayList<>(), new ArrayList<>());
+        //Calculator 객체 생성
 
         Scanner sc = new Scanner(System.in);
 
 
         // 값을 무한히 저장하기 위해 동적 배열인 ArrayList 사용을 위해 선언 및 생성 하였음
-        List<Integer> results = new ArrayList<>();
+        ArrayList<Integer> results = new ArrayList<>();
 
 
         //반복을 위해 while () {} 사용 if문에 break를 넣어 exit 할때 반복중지
 
         while (true) {
-            System.out.print("첫 번째 숫자를 입력하세요: ");
-            int num1 = sc.nextInt();
-            System.out.print("두 번째 숫자를 입력하세요: ");
-            int num2 = sc.nextInt();
-            System.out.print("사칙연산 기호를 입력하세요: "); //+,-,*,/
-            String operator = sc.next();
 
+            System.out.println("어떤 계산을 하시겠습니까? (1:사칙연산, 2: 원의넓이)");
+            int choice = sc.nextInt();
+
+            if (choice == 1) {
+                System.out.print("첫 번째 숫자를 입력하세요: ");
+                int num1 = sc.nextInt();
+                System.out.print("두 번째 숫자를 입력하세요: ");
+                int num2 = sc.nextInt();
+
+                System.out.print("사칙연산 기호를 입력하세요: "); //+,-,*,/
+                String operator = sc.next();
 
 
 // if 조건문을 사용하여 사칙연산 기호에 따라 연산을 하였고
@@ -59,17 +65,18 @@ public class App {
 //                System.out.println(rst);   // for 문을 통해 연산결과를 rst 변수명으로 지정후 프린트
 //            }
 
-            int result=0;
-            try {
-                result = calculator.calculate(operator, num1, num2);
-            } catch (Exception m){
-                System.out.println(m.getMessage()); // 예외 후 처리
+                int result = 0;
+                try {
+                    result = calculator.calculate(operator, num1, num2);
+                } catch (Exception m) {
+                    System.out.println(m.getMessage()); // 예외 후 처리
+                }
+                System.out.println("결과: " + result);
+                //calculator 클래스의 calculate 매서드 호출, 연산실행
+
+                calculator.getResults().add(result);
+
             }
-            System.out.println("결과: " + result);
-            //calculator 클래스의 calculate 매서드 호출, 연산실행
-
-            calculator.getResults().add(result);
-
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             String removeChat = sc.next();
@@ -81,11 +88,16 @@ public class App {
             String inquiry = sc.next();
             if (inquiry.equals("inquiry")) {
                 calculator.inquiryResults();
-//                results = calculator.getResults(); // Calculator 클래스의 결과값을 resluts 변수에 저장
-//                for (int rst : calculator.getResults()) {   //향상된 for문을 사용하여 저장결과값 rst를 반복하여 조회 할 수 있도록 함
-//                    System.out.println(rst);
-//                }
+            } else{
+                System.out.println("원의 반지름을 입력하세요: ");
+                int radius = sc.nextInt();
+                double area = calculator.calculateCircleArea(radius);
+                calculator.getCircleresult().add(area);
+                System.out.println("반지름이 " + radius + "인 원의 넓이는 :" +area);
+                System.out.println("저장된 원의 넓이 전체 조회");
+                calculator.inquiryCircleResults();
             }
+
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료) 다시 시작하시려면 타이핑 해주세요");
             String exit = sc.next();
